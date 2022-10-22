@@ -1,13 +1,21 @@
-function Book(title, author, pages, isRead) {
+class Book {
+    constructor(title, author, pages, isRead)
+    {
     this.title = title
     this.author = author
     this.pages = pages
-    this.isRead = isRead
-    this.info = function(){
+    this.isRead = isRead 
+    }
+    info = function()
+    {
         return (
             title + " by " + author + ", " + pages + " pages, " + isRead
-        )
+            )
     }
 }
-let pythonCrashCourse = new Book("Python Crash Course", "dunno", 500, "not completed")
-console.log(pythonCrashCourse.info())
+class Library {
+    constructor(){
+        myLibrary = []
+    }
+    
+}

@@ -13,6 +13,26 @@
         <button class="addBookButton">
             + Add Book
         </button>
+        <div class="formContainer">
+            <h1>Add a Book</h1>
+            <form action="" id="bookAddForm">
+                
+                <input type="text" name="bookTitle" id="title" placeholder="Title" class="input">
+                <label for="title"></label>
+                
+                <input type="text" name="bookAuthor" id="author" placeholder="Author" class="input">
+                <label for="author"></label>
+                
+                <input type="number" name="bookPages" id="Pages" placeholder="Number of Pages" class="input">
+                <label for="pages"></label>
+                <div class="isRead">
+                    <p>Have you read it?</p>
+                    <input type="checkbox" name="read" id="isReadCheckBox" value="true">
+                </div>
+                <button class="submitButton" form="bookAddForm" type="submit">Submit</button>
+            </form>
+            
+        </div>
     </main>
     <footer></footer>
 </body>
