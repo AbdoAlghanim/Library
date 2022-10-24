@@ -58,6 +58,41 @@ main{
     justify-content: center;
     align-items: center;
 }
+.cardcontainer {
+    display: flex;
+    width: 80vw;
+    height: fit-content;
+    gap: 2rem;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    width: 16vw;
+    background-color: #eee;
+    height: 30vh;
+    border-radius: 20px;
+    align-items: center;
+}
+.cardTitle{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.cardBtn{
+    width: 80%;
+    border: none;
+    background-color: white;
+    height: 20%;
+    border-radius: 20px;
+    font-size: 1.5rem;
+}
+.isReadBtn {
+    background-color: rgb(116, 190, 3);
+}
+.removeBtn {
+    background-color: rgba(209, 5, 5, 0.719);
+}
 .navbar{
     background-color: #eee;
     height: 10vh;

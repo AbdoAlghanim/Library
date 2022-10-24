@@ -32,12 +32,29 @@ class Library {
         this.myLibrary = this.myLibrary.filter((book) => book.title !== title)
     }
 }
-
+// library initialization
 const library = new Library()
 
-const submitButton = document.getElementsByClassName("submitButton")
+// self explanatory
+const submitButton = document.getElementsByClassName("submitButton")[0]
 const formDiv = document.getElementById('formDiv')
 const addBookButton = document.getElementsByClassName("addBookButton")[0]
 
-
+// function to show the form on button press
 addBookButton.addEventListener("click", () => formDiv.classList.add('active'));
+
+// instantiates a new book object and pushes it to the library array
+const createNewBook = () => {
+    let bookTitle = document.getElementById('title').value,
+    bookAuthor = document.getElementById('author').value,
+    bookPages = document.getElementById('pages').value,
+    bookIsRead = document.getElementById('isReadCheckBox').value
+
+    let bookTitleObject = new Book(bookTitle, bookAuthor, bookPages, bookIsRead)
+
+    library.addNewBook(bookTitleObject)
+}
+
+const addToUI = () => {
+    
+}
