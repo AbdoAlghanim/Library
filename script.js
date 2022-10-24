@@ -56,5 +56,5 @@ const createNewBook = () => {
 }
 
 const addToUI = () => {
-    
+    library.myLibrary.forEach
 }
