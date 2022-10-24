@@ -16,7 +16,7 @@ class Book {
 class Library {
 
     constructor(){
-        myLibrary = []
+        this.myLibrary = []
     }
 
     addNewBook(newBook) {
@@ -35,8 +35,9 @@ class Library {
 
 const library = new Library()
 
-const submitButton = document.getElementsByClassName("submitButton"),
-formContainer = document.getElementsByClassName("formContainer"),
-addBookButton = document.getElementsByClassName("addBookButton")
+const submitButton = document.getElementsByClassName("submitButton")
+const formDiv = document.getElementById('formDiv')
+const addBookButton = document.getElementsByClassName("addBookButton")[0]
 
-addBookButton.addEventListener
+
+addBookButton.addEventListener("click", () => formDiv.classList.add('active'));
