@@ -14,8 +14,21 @@ class Book {
     }
 }
 class Library {
+
     constructor(){
         myLibrary = []
     }
-    
+
+    addNewBook(newBook) {
+        if (!this.inLibrary) {
+            this.myLibrary.push(newBook)
+        }
+    }
+
+    inLibrary(newBook){
+        return this.myLibrary.some((book) => book.title === newBook.title)
+    }
+    removeBook(title){
+        this.myLibrary = this.myLibrary.filter((book) => book.title !== title)
+    }
 }
