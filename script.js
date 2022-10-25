@@ -108,26 +108,22 @@ const addToUI = () => {
             removeButton.parentNode.classList.add('inactive')
             console.log(library.myLibrary)
         })
-    })
-}
 
-// used to get an array of the buttons on the cards
-const readButtons = document.getElementsByClassName("cardBtn")
-console.log(readButtons)
-
-const toggleRead = () => {
-    readButtons.forEach((button) => {
-        if (button.textContent = "Read"){
-            console.log(button.textContent)
-            button.addEventListener('click', () => {
-                if (button.classList.contains('isReadBtn')){
-                    button.classList.remove('isReadBtn')
-                }
-                else {
-                    button.classList.add('isReadBtn')
-                }
+        // toggles read button color
+        readButton.addEventListener('click', () => {
+            if(readButton.classList.contains('isReadBtn')){
+                readButton.classList.remove('isReadBtn')
+                readButton.classList.add('removeBtn')
+            }
+            else if(readButton.classList.contains('removeBtn')) {
+                readButton.classList.add('isReadBtn')
+                readButton.classList.remove("removeBtn")
+            }
+            console.log(readButton.classList.contains('isReadBtn'),
+            readButton.classList.contains('removeBtn'))
         })
-        }
     })
-}
-toggleRead()
+        
+                
+    }
+
