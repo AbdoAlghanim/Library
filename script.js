@@ -60,6 +60,14 @@ const createNewBook = () => {
     library.addNewBook(bookObject)
     console.log(library.myLibrary)
 }
+
+// creates UI elements and appends them to the container, also fills their inner text
+// and adds remove button which I couldn't place out of the function due to scope problems
+// as I was unable to find the title of the book which has the remove button without selecting all books
+
+// I think the solution is to use a for loop instead of a for each
+// and store the i variable (the index temporary variable) and then
+// use it as a sort of ID var
 const addToUI = () => {
     library.myLibrary.forEach((book) => {
         let card = document.createElement('div'),
@@ -88,11 +96,38 @@ const addToUI = () => {
         removeButton.textContent += "Remove"
 
         // checks if the book is read, if it is then it'll be green
-        if (document.getElementById('isReadCheckBox') === 'true') {
+        if (document.getElementById('isReadCheckBox').checked) {
             readButton.classList.add('isReadBtn')
         }
         else {
             readButton.classList.add('removeBtn')
         }
+        removeButton.addEventListener('click' , () => {
+            title = removeButton.previousElementSibling.previousElementSibling.textContent
+            library.removeBook(title)
+            removeButton.parentNode.classList.add('inactive')
+            console.log(library.myLibrary)
+        })
     })
 }
+
+// used to get an array of the buttons on the cards
+const readButtons = document.getElementsByClassName("cardBtn")
+console.log(readButtons)
+
+const toggleRead = () => {
+    readButtons.forEach((button) => {
+        if (button.textContent = "Read"){
+            console.log(button.textContent)
+            button.addEventListener('click', () => {
+                if (button.classList.contains('isReadBtn')){
+                    button.classList.remove('isReadBtn')
+                }
+                else {
+                    button.classList.add('isReadBtn')
+                }
+        })
+        }
+    })
+}
+toggleRead()
