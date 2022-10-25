@@ -101,6 +101,7 @@ const addToUI = () => {
         }
         else {
             readButton.classList.add('removeBtn')
+            readButton.textContent = "Not Read"
         }
         removeButton.addEventListener('click' , () => {
             title = removeButton.previousElementSibling.previousElementSibling.textContent
@@ -114,10 +115,12 @@ const addToUI = () => {
             if(readButton.classList.contains('isReadBtn')){
                 readButton.classList.remove('isReadBtn')
                 readButton.classList.add('removeBtn')
+                readButton.textContent = "Not Read"
             }
             else if(readButton.classList.contains('removeBtn')) {
                 readButton.classList.add('isReadBtn')
                 readButton.classList.remove("removeBtn")
+                readButton.textContent = "Read"
             }
             console.log(readButton.classList.contains('isReadBtn'),
             readButton.classList.contains('removeBtn'))
