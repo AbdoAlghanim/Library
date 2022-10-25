@@ -67,13 +67,14 @@ main{
 .card {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     padding: 1rem;
     width: 16vw;
     background-color: #eee;
     height: 30vh;
     border-radius: 20px;
     align-items: center;
+    justify-content: space-around;
 }
 .cardTitle{
     font-size: 2rem;
@@ -86,6 +87,7 @@ main{
     height: 20%;
     border-radius: 20px;
     font-size: 1.5rem;
+    cursor: pointer;
 }
 .isReadBtn {
     background-color: rgb(116, 190, 3);
